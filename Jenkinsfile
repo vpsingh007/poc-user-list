@@ -15,7 +15,7 @@ pipeline {
         }
         stage("upload to s3") {
             steps {
-                sh 'aws s3 sync .next/ s3://jenkins-poc-bucket/'
+                sh 'aws s3 sync .next/server/pages/ s3://jenkins-poc-bucket/'
             }
         }
         
